@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aman Saraogi — Data Analyst</title>
-<meta name="description" content="Portfolio of Aman Saraogi — Data Analyst skilled in Python, SQL, and Power BI. Projects in banking risk, customer churn, and regional sales analysis.">
+<title>Aman Saraogi — Software Engineer</title>
+<meta name="description" content="Portfolio of Aman Saraogi — full-stack software engineer working in TypeScript, Node and React, with a background in data analytics and applied AI.">
 <style>
   :root {
     --bg: #0a0f14;
@@ -169,6 +169,17 @@
 
   /* ---------- Projects ---------- */
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 26px; }
+  .proj-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .proj-status {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  .proj-status::before {
+    content: ""; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 0 3px rgba(45,212,191,0.18);
+  }
+  .sub-head { font-size: 20px; margin: 40px 0 6px; letter-spacing: -0.01em; }
   .proj-card { display: flex; flex-direction: column; padding: 24px; transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s; }
   .proj-card:hover { transform: translateY(-4px); border-color: rgba(45,212,191,0.35); box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
   .proj-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
@@ -195,7 +206,7 @@
   }
   .proj-metric b { color: var(--accent); font-weight: 700; }
   .proj-card .tags { margin-top: 16px; }
-  @media (max-width: 900px) { .proj-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .proj-grid, .proj-grid.cols-2 { grid-template-columns: 1fr; } }
 
   .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
   .mini-card { padding: 20px 22px; transition: transform 0.18s, border-color 0.18s; }
@@ -304,12 +315,12 @@
   </svg>
   <div class="hero-inner">
     <div class="hero-text">
-      <span class="hero-kicker">Open to Data Analyst &amp; BI roles</span>
-      <h1>Hi, I'm Aman Saraogi.<br>I turn data into <span class="accent">decisions</span>.</h1>
-      <p class="hero-sub">Data Analyst working with <strong>Python, SQL &amp; Power BI</strong> — from raw, messy datasets to dashboards and insights that leadership actually uses.</p>
+      <span class="hero-kicker">Open to software engineering roles</span>
+      <h1>Hi, I'm Aman Saraogi.<br>I build software people actually <span class="accent">use</span>.</h1>
+      <p class="hero-sub">Full-stack engineer working in <strong>TypeScript, Node &amp; React</strong> — I sit with domain experts, extract the rules nobody has written down, and turn them into working software.</p>
       <p class="hero-loc">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        Kolkata, India
+        Pune / Kolkata, India
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="resume.pdf" download="AmanSaraogi_Resume.pdf">
@@ -339,18 +350,18 @@
 
 <section id="about" class="reveal">
   <p class="sec-kicker">About</p>
-  <h2>From raw data to reporting that ships</h2>
+  <h2>Software built against real business problems</h2>
   <div class="about-grid">
     <div class="about-card">
-      <p>I'm a Data Analyst with hands-on internship experience at <strong>Aglo Packaging Pvt. Ltd.</strong>, where I built Power BI dashboards used weekly by senior management, automated recurring Python-based reports, and cut reporting turnaround by 30%.</p>
-      <p>I work across the full analysis workflow — <strong>cleaning and structuring raw data</strong> with Pandas and SQL, <strong>exploring it</strong> to find the patterns that matter, and <strong>presenting it</strong> through dashboards and executive summaries. My project work spans customer churn, banking risk EDA, and regional sales reporting.</p>
-      <p>I'm a B.Tech graduate in Civil Engineering from <strong>NIT Durgapur</strong>, currently teaching mathematics at Bakliwal Tutorials — and looking for a data analyst or business intelligence role where I can turn complex datasets into decisions that matter.</p>
+      <p>I build software for problems that already exist. At <strong>Aglo Polymers</strong> I replaced a fully manual, spreadsheet-and-retyping documentation process with a <strong>quotation-to-dispatch system</strong> that is now in daily use by their sales and dispatch team — encoding INCO terms, HSN codes, export tax treatment and a 10% shipment variance clause directly into the domain model.</p>
+      <p>I also built <strong>Resume Roaster</strong>, an AI resume-analysis product where every LLM call is constrained by hand-written JSON Schemas and re-validated with Zod, so malformed output fails loudly instead of quietly rendering a broken dashboard.</p>
+      <p>I started with the same group as a <strong>data analyst intern</strong>, building Power BI dashboards and Python automation — which is where I learned to scope work by talking to the people who actually do the job. I'm a B.Tech graduate from <strong>NIT Durgapur</strong>, comfortable sitting with a domain expert, extracting the rules nobody has written down, and turning them into working software.</p>
     </div>
     <div class="stats">
+      <div class="stat-card"><div class="stat-num">Daily</div><div class="stat-label">production use by a 5–6 person sales &amp; dispatch team</div></div>
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">chained document types generated end-to-end</div></div>
+      <div class="stat-card"><div class="stat-num">14</div><div class="stat-label">AI-scored resume categories, schema-validated</div></div>
       <div class="stat-card"><div class="stat-num">30%</div><div class="stat-label">faster reporting via Python automation</div></div>
-      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Power BI dashboards used by management</div></div>
-      <div class="stat-card"><div class="stat-num">40%</div><div class="stat-label">less data-prep time for the team</div></div>
-      <div class="stat-card"><div class="stat-num">10k+</div><div class="stat-label">records per dataset analysed</div></div>
     </div>
   </div>
 </section>
@@ -361,85 +372,93 @@
   <div class="skills-grid">
     <div class="skill-card">
       <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Languages</h3>
-      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span></div>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">JavaScript</span></div>
     </div>
     <div class="skill-card">
-      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Visualisation</h3>
-      <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span></div>
+      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Full-Stack</h3>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Tailwind CSS</span><span class="tag">SQLite</span><span class="tag">REST APIs</span></div>
     </div>
     <div class="skill-card">
-      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>Data Handling</h3>
-      <div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">EDA</span><span class="tag">Data Cleaning</span><span class="tag">Feature Engineering</span></div>
+      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Data &amp; BI</h3>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">EDA</span></div>
     </div>
     <div class="skill-card">
-      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Other Tools</h3>
-      <div class="tags"><span class="tag">Advanced Excel</span><span class="tag">Git</span><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Blender</span></div>
+      <h3><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V16a3 3 0 0 0 3 3 3 3 0 0 0 4 2 3 3 0 0 0 4-2 3 3 0 0 0 3-3v-1.2A3 3 0 0 0 18 9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3z"/></svg>Applied AI &amp; Tools</h3>
+      <div class="tags"><span class="tag">Anthropic API</span><span class="tag">OpenAI API</span><span class="tag">JSON Schema</span><span class="tag">Zod</span><span class="tag">Claude Code</span><span class="tag">Git</span><span class="tag">Advanced Excel</span></div>
     </div>
   </div>
 </section>
 
 <section id="projects" class="reveal">
   <p class="sec-kicker">Featured Projects</p>
-  <h2>Data work I'm proud of</h2>
-  <p class="sec-lead">End-to-end analyses — data cleaning, EDA, and dashboards — each with a concrete, decision-ready finding.</p>
-  <div class="proj-grid">
+  <h2>Software I've shipped</h2>
+  <p class="sec-lead">Two systems built end-to-end — one running a real export business day to day, one an AI product with the model output pinned down hard.</p>
+  <div class="proj-grid cols-2">
 
     <article class="proj-card">
       <div class="proj-head">
-        <div class="proj-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v2h18V7l-9-5z"/><path d="M5 11v6M9.5 11v6M14.5 11v6M19 11v6"/><path d="M3 19h18v3H3z"/></svg></div>
+        <div class="proj-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
         <div class="proj-links">
-          <a href="https://github.com/AmanDebs/Banking-Risk-Analysis" target="_blank" rel="noopener" aria-label="Banking Risk Analysis on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          <a href="https://github.com/AmanDebs/quotation-manager" target="_blank" rel="noopener" aria-label="Quotation Manager on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
         </div>
       </div>
-      <h3>Banking Risk Analysis</h3>
-      <p>EDA on 30,000+ loan records to identify the key drivers of default risk — credit history, loan-to-income ratio, and employment tenure. Cleaned data, engineered features like debt-to-income, and built correlation heatmaps and distribution plots to back tighter lending recommendations.</p>
-      <div class="proj-metric">Applicants with loan-to-income &gt; 0.4 drove <b>60%+ of defaults</b></div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span></div>
+      <span class="proj-status">In production at Aglo Polymers</span>
+      <h3>Quotation Manager</h3>
+      <p>A complete order-to-dispatch document system — <strong>Quotation → Order → Proforma Invoice → Commercial Invoice + Packing List</strong> — where each document is generated from the previous one, eliminating re-entry and manual arithmetic across the whole chain. It replaced a fully manual spreadsheet-and-retyping process I scoped directly with the client.</p>
+      <p style="margin-top:12px;">Real export-trade rules live in the domain layer: HSN codes, INCO terms, multi-currency (INR/USD/EUR), GST versus zero-rated export treatment, and automatic validation of dispatch quantities against the contractual 10% variance clause. Role-based access with a manager approval gate means unapproved documents export with a "Pending Approval" watermark — the approval state is impossible to bypass. All monetary computation is centralised server-side as a single source of truth.</p>
+      <div class="proj-metric">In <b>daily use by a 5–6 person</b> sales &amp; dispatch team</div>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">SQLite</span><span class="tag">Tailwind CSS</span><span class="tag">Render</span></div>
     </article>
 
     <article class="proj-card">
       <div class="proj-head">
-        <div class="proj-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="proj-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V16a3 3 0 0 0 3 3 3 3 0 0 0 4 2 3 3 0 0 0 4-2 3 3 0 0 0 3-3v-1.2A3 3 0 0 0 18 9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3z"/></svg></div>
         <div class="proj-links">
-          <a href="https://github.com/AmanDebs/Customer-Churn-Analysis" target="_blank" rel="noopener" aria-label="Customer Churn Analysis on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          <a href="https://resume-roaster-plum.vercel.app" target="_blank" rel="noopener" aria-label="Resume Roaster live demo" title="Live demo"><svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zM19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></a>
+          <a href="https://github.com/AmanDebs/resume-roaster" target="_blank" rel="noopener" aria-label="Resume Roaster on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
         </div>
       </div>
-      <h3>Customer Churn Analysis</h3>
-      <p>EDA across 7,043 telecom customers to uncover churn patterns. Segmented customers with SQL by tenure, contract type, and demographics, then built an interactive Power BI report with slicers and KPI cards for executive-level churn tracking.</p>
-      <div class="proj-metric">Identified key drivers behind a <b>26.5% churn rate</b></div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span></div>
-    </article>
-
-    <article class="proj-card">
-      <div class="proj-head">
-        <div class="proj-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-        <div class="proj-links">
-          <a href="https://github.com/AmanDebs/Regional-Sales-Analysis/blob/main/SALES%20REPORT.pdf" target="_blank" rel="noopener" aria-label="Regional Sales report PDF" title="Sales report (PDF)"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg></a>
-          <a href="https://github.com/AmanDebs/Regional-Sales-Analysis" target="_blank" rel="noopener" aria-label="Regional Sales Analysis on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
-        </div>
-      </div>
-      <h3>Regional Sales Analysis</h3>
-      <p>Cleaned and transformed 50,000+ rows of sales data across 5 regions, surfaced the top 3 product categories and 2 underperforming regions with growth potential, and shipped a 6-visual Power BI dashboard plus 4 data-backed recommendations as an executive summary.</p>
-      <div class="proj-metric"><b>50k+ rows</b> across 5 regions → executive dashboard</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span></div>
+      <span class="proj-status">Live — try it in the browser</span>
+      <h3>Resume Roaster</h3>
+      <p>An AI resume-analysis product that scores a resume across <strong>14 categories with supporting evidence quotes</strong>, matches ATS keywords against a pasted job posting, produces a prioritised fix list, and rewrites individual bullets in one click with STAR breakdowns.</p>
+      <p style="margin-top:12px;">The interesting part is the guardrails. Every LLM call is constrained by a hand-written <strong>JSON Schema and re-validated with Zod</strong>, so malformed model output fails loudly instead of quietly rendering a broken dashboard. Scoring arithmetic stays deterministic in TypeScript rather than trusting the model to do maths.</p>
+      <div class="proj-metric"><b>Schema-constrained</b> LLM output — no silent failures</div>
+      <div class="tags"><span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Anthropic API</span><span class="tag">OpenAI API</span><span class="tag">Zod</span></div>
     </article>
 
   </div>
 
-  <h2 style="font-size:22px; margin-top:38px;">Other builds</h2>
+  <h3 class="sub-head">Data &amp; analytics projects</h3>
+  <p class="sec-lead" style="margin-bottom:24px;">End-to-end analyses from my data work — each with a concrete, decision-ready finding.</p>
+  <div class="mini-grid">
+    <div class="mini-card">
+      <h4><a href="https://github.com/AmanDebs/Banking-Risk-Analysis" target="_blank" rel="noopener">Banking Risk Analysis</a><span class="mini-tag">Python</span></h4>
+      <p>EDA on 30,000+ loan records to find the drivers of default risk. Engineered features like debt-to-income and built correlation heatmaps — applicants with a loan-to-income ratio above 0.4 accounted for <strong>over 60% of defaults</strong>.</p>
+    </div>
+    <div class="mini-card">
+      <h4><a href="https://github.com/AmanDebs/Customer-Churn-Analysis" target="_blank" rel="noopener">Customer Churn Analysis</a><span class="mini-tag">Python · SQL · BI</span></h4>
+      <p>Churn patterns across 7,043 telecom customers (<strong>26.5% churn rate</strong>). Segmented with SQL by tenure and contract type, then built an interactive Power BI report with slicers and KPI cards.</p>
+    </div>
+    <div class="mini-card">
+      <h4><a href="https://github.com/AmanDebs/Regional-Sales-Analysis" target="_blank" rel="noopener">Regional Sales Analysis</a><span class="mini-tag">Python · Power BI</span></h4>
+      <p>Cleaned <strong>50,000+ rows</strong> across 5 regions, surfaced the top 3 categories and 2 underperforming regions, and shipped a 6-visual dashboard plus 4 recommendations as an <a href="https://github.com/AmanDebs/Regional-Sales-Analysis/blob/main/SALES%20REPORT.pdf" target="_blank" rel="noopener">executive summary</a>.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-head">Other builds</h3>
   <p class="sec-lead" style="margin-bottom:24px;">Side projects that keep the building muscles sharp.</p>
   <div class="mini-grid">
     <div class="mini-card">
-      <h4><a href="https://github.com/AmanDebs/racing-game" target="_blank" rel="noopener">Turbo Drift 🏎️</a><span class="mini-tag">JS / Canvas</span></h4>
-      <p>A single-file HTML5 canvas arcade racing game — lane-dodging, nitro, combo scoring, WebAudio sound effects, and a localStorage leaderboard. Zero dependencies.</p>
+      <h4><a href="https://racing-game-aman003.vercel.app" target="_blank" rel="noopener">Turbo Drift 🏎️</a><span class="mini-tag">JS / Canvas</span></h4>
+      <p>A single-file HTML5 canvas arcade racing game — lane-dodging, nitro, combo scoring, WebAudio sound effects, and a localStorage leaderboard. Zero dependencies. <a href="https://github.com/AmanDebs/racing-game" target="_blank" rel="noopener">Source</a>.</p>
+    </div>
+    <div class="mini-card">
+      <h4><a href="https://www.debsocnitdgp.in" target="_blank" rel="noopener">DebSoc NITDgp Website 🎤</a><span class="mini-tag">Web</span></h4>
+      <p>Official website of The Debating Society, NIT Durgapur — developed and maintained as society Convenor. <a href="https://github.com/AmanDebs/debsoc-nitdgp-website" target="_blank" rel="noopener">Source</a>.</p>
     </div>
     <div class="mini-card">
       <h4><a href="https://github.com/AmanDebs/Snake-Game-" target="_blank" rel="noopener">Snake Game 🐍</a><span class="mini-tag">Python</span></h4>
       <p>The classic snake game built in Python — an early project from learning programming fundamentals.</p>
-    </div>
-    <div class="mini-card">
-      <h4><a href="https://github.com/AmanDebs/debsoc-nitdgp-website" target="_blank" rel="noopener">DebSoc NITDgp Website 🎤</a><span class="mini-tag">Web</span></h4>
-      <p>Official website of The Debating Society, NIT Durgapur — developed and maintained as society Convenor.</p>
     </div>
   </div>
 </section>
@@ -450,35 +469,40 @@
   <div class="timeline">
 
     <div class="t-item">
-      <div class="t-head"><span class="t-role">Maths Faculty</span><span class="t-org">Bakliwal Tutorials</span><span class="t-date">May 2026 – Present</span></div>
+      <div class="t-head"><span class="t-role">Software Developer</span><span class="t-org">Aglo Polymers Pvt. Ltd. (Aglo Group)</span><span class="t-date">Jun 2026 – Present</span></div>
       <ul>
-        <li>Designed and delivered structured lessons for 30+ students across batches, adapting content to individual learning needs.</li>
-        <li>Tracked and analysed performance data in Excel, identifying learning gaps and improving average test scores by ~15%.</li>
-        <li>Maintained weekly attendance and performance records for 3 batches, enabling timely progress reports to management.</li>
+        <li>Invited back by the group after interning with them, to replace a fully manual spreadsheet-and-retyping documentation process; gathered requirements directly from the client, scoped the system, and delivered it into daily use by a team of 5–6 across sales and dispatch.</li>
+        <li>Built a complete order-to-dispatch document system (Quotation → Order → Proforma Invoice → Commercial Invoice + Packing List) in which each document is generated from the previous one, eliminating re-entry and manual arithmetic across the whole chain.</li>
+        <li>Modelled real export-trade rules in the domain layer: HSN codes, INCO terms, multi-currency (INR/USD/EUR), GST versus zero-rated export treatment, and automatic validation of dispatch quantities against the contractual 10% variance clause.</li>
+        <li>Implemented role-based access control with a manager approval gate — employees see only assigned customers, and unapproved documents export with a "Pending Approval" watermark, making the approval state impossible to bypass.</li>
+        <li>Centralised all monetary computation server-side as a single source of truth, and generated four branded PDF document types with per-type yearly numbering.</li>
+        <li>Deployed to production on Render, selecting SQLite on a persistent disk over serverless after determining a file-backed database is incompatible with ephemeral filesystems; added WAL-aware daily snapshots with 14-day retention.</li>
+        <li>Worked directly with the sales and dispatch staff who use the system — walked them through it, collected feedback from real use, and iterated in response.</li>
       </ul>
     </div>
 
     <div class="t-item">
-      <div class="t-head"><span class="t-role">Data Analyst Intern</span><span class="t-org">Aglo Packaging Pvt. Ltd.</span><span class="t-date">Dec 2025 – Jan 2026</span></div>
+      <div class="t-head"><span class="t-role">Data Analyst Intern</span><span class="t-org">Aglo Packaging Pvt. Ltd. (Aglo Group)</span><span class="t-date">Dec 2025 – Jan 2026</span></div>
       <ul>
-        <li>Analysed 5+ operational and business datasets (10,000+ records each) using Python and Excel to identify trends and performance gaps.</li>
-        <li>Built 4 Power BI dashboards tracking 10+ KPIs across production and sales, used weekly by senior management.</li>
-        <li>Automated recurring reports with Python and Excel, cutting reporting turnaround time by 30%.</li>
-        <li>Transformed 8+ raw data sources into clean, analysis-ready datasets, reducing the team's data-prep time by ~40%.</li>
+        <li>Worked directly with operations and sales stakeholders to scope reporting needs, then built 4 Power BI dashboards tracking 10+ KPIs, used weekly by senior management for decision-making.</li>
+        <li>Automated recurring reports with Python and Excel, cutting reporting turnaround time by ~30%.</li>
+        <li>Built repeatable transformation pipelines over 8+ raw data sources, reducing the team's data preparation time by ~40%.</li>
       </ul>
     </div>
 
     <div class="t-item">
-      <div class="t-head"><span class="t-role">Civil Engineering Trainee</span><span class="t-org">Damodar Valley Corporation (DVC)</span><span class="t-date">May 2025</span></div>
+      <div class="t-head"><span class="t-role">Maths Faculty</span><span class="t-org">Bakliwal Tutorials, Pune</span><span class="t-date">May 2026 – Present</span></div>
       <ul>
-        <li>Supported data-backed monitoring of 3 civil infrastructure projects across 10+ site inspections, tracking maintenance schedules and contributing to structured project documentation.</li>
+        <li>Tracked and analysed performance data for 30+ students in Excel, identifying learning gaps and improving average test scores by ~15%.</li>
+        <li>Delivered structured lessons across 3 batches, adapting explanations in real time to each student's level — the same translation skill needed to explain technical systems to non-technical users.</li>
       </ul>
     </div>
 
     <div class="t-item">
-      <div class="t-head"><span class="t-role">Graphic Designer</span><span class="t-org">SimpleSample</span><span class="t-date">Jul 2024 – Dec 2024</span></div>
+      <div class="t-head"><span class="t-role">Graphic &amp; Content Designer</span><span class="t-org">SimpleSample</span><span class="t-date">Jul 2024 – Dec 2024</span></div>
       <ul>
-        <li>Designed 50+ digital and print creatives for 3 marketing teams — brochures, banners, and social media assets delivered on time with consistent visual standards.</li>
+        <li>Produced 50+ creatives across formats for 3 marketing teams — social media reels, posters, brochures and pamphlets — delivered on deadline with consistent visual standards.</li>
+        <li>Designed the company's Amazon product listing interface, structuring product imagery and page layout for the storefront.</li>
       </ul>
     </div>
 
@@ -492,22 +516,18 @@
     <div class="edu-card">
       <h3>NIT Durgapur</h3>
       <div class="edu-meta">B.Tech, Civil Engineering · 2022 – 2026</div>
-      <p>National Institute of Technology, Durgapur. CGPA: 6.98</p>
+      <p>National Institute of Technology, Durgapur.</p>
     </div>
     <div class="edu-card">
-      <h3>DPS Ruby Park, Kolkata</h3>
-      <div class="edu-meta">CBSE Class XII · 2021</div>
-      <p>Scored 84.8%</p>
+      <h3>Data Analytics Advanced</h3>
+      <div class="edu-meta">Udemy · Certification</div>
+      <p>Python, SQL, Power BI, Tableau.</p>
     </div>
     <div class="edu-card">
-      <h3>DPS Ruby Park, Kolkata</h3>
-      <div class="edu-meta">CBSE Class X · 2019</div>
-      <p>Scored 92.2%</p>
+      <h3>AI-Assisted Development</h3>
+      <div class="edu-meta">Claude Code</div>
+      <p>Specifying, building and iterating on full-stack applications with AI coding tools.</p>
     </div>
-  </div>
-  <div class="cert-row">
-    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
-    <div><b>Data Analytics Advanced — Udemy</b> · Python, SQL, Power BI, Tableau</div>
   </div>
   <div class="cert-row">
     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
@@ -519,7 +539,7 @@
   <div class="footer-inner reveal">
     <p class="sec-kicker">Contact</p>
     <h2>Let's work together</h2>
-    <p>I'm actively looking for data analyst and business intelligence opportunities. If you have a role, a project, or just a dataset that needs untangling — reach out.</p>
+    <p>I'm actively looking for software engineering roles. If you have a role, a project, or a messy business process that should be software — reach out.</p>
     <div class="footer-cta">
       <a class="btn btn-primary" href="mailto:saraogiaman003@gmail.com">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
